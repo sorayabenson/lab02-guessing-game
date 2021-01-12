@@ -1,16 +1,16 @@
 # Guess a Number App
 
 ## html
-    - Number input
+    //- Number input
         so a user can enter their guesses
 
-    - Button
+    //- Button
         to submit the guess and trigger state changes
 
-    - Text Div
+    //- Text Div
         to display remaining guesses and 
 
-    - Results span: Too high/too low span/you guessed correct!
+    //- Results span: Too high/too low span/you guessed correct!
         to tell the user what is wrong
 
 stretch
@@ -18,17 +18,17 @@ stretch
         to reset the game
 
 ## java
-    -Grab dom elements
-        add ids
+    //- Grab dom elements
+        //add ids
 
-    -Initialized state (global lets)
+    - Initialized state (global lets)
         pick the random number the user needs to guess
 
         Math.ceil(Math.random() * 20)
 
         guesses remaining, start at 4
 
-    -addEventListener to the submit button
+    - addEventListener to the submit button
         click should submit their answer
         remaining guesses decrease by 1 (--)
         store guess in a variable (`Number(someInput.value)`)
@@ -41,7 +41,7 @@ stretch
         disable input if run out of guesses + loser message.
     
 stretch
-    -addEventListener to reset button
+    - addEventListener to reset button
         on click reset remaining guesses to 4
         regenerate random number
         reenable input if disabled
