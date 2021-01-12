@@ -22,16 +22,16 @@ stretch
         //add ids
 
     - Initialized state (global lets)
-        pick the random number the user needs to guess
+        //pick the random number the user needs to guess
 
-        Math.ceil(Math.random() * 20)
+           // Math.ceil(Math.random() * 20)
 
-        guesses remaining, start at 4
+        //guesses remaining, start at 4
 
     - addEventListener to the submit button
-        click should submit their answer
+        //click should submit their answer
         remaining guesses decrease by 1 (--)
-        store guess in a variable (`Number(someInput.value)`)
+        //store guess in a variable (`Number(someInput.value)`)
         compare user guess with random number
         update view
             if guess is < n display 'too high' in results span
