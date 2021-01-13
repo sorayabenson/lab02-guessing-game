@@ -26,13 +26,13 @@ guessButton.addEventListener('click', () => {
     else if (userGuess > randomNumberSelector) {
         resultsMessageText.textContent = tooHighMessage;
     }
-    else {
+    else if (userGuess == randomNumberSelector) {
         resultsMessageText.textContent = correctAnswerMessage;
         remainingGuessesText.hidden = true;
         guessButton.disabled = true;
-    };
-
-    if (guessesRemain === 0) {
+    }
+    else {
+        guessesRemain === 0
         guessButton.disabled = true;
         resultsMessageText.textContent = lostMessage;
     };
