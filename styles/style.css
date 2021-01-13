@@ -4,7 +4,7 @@
 
 body, html {
     width: 100%;
-    height: auto;
+    height: 100%;
     padding: 0;
     margin: 0;
     display: flex;
@@ -26,6 +26,12 @@ header {
     background-size: cover;
 }
 
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-weight: 300;
+    font-size: 1.8rem;
+}
+
 main {
     width: 75%;
     height: auto;
@@ -35,72 +41,19 @@ main {
     align-items: center;
 }
 
-section.intro-container {
-    width: 70%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 40px;
-}
-
-section.intro {
-    width: 100%;
-    height: auto;
-}
-
-img {
-    width: 500px;
-    height: auto;
-    margin: 15px;
-    border-radius: 3px;
-}
-
-section.article-container {
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    
-}
-
-section.topic {
-    width: 100%;
-    height: auto;
-    padding: 15px 40px 15px 40px;
-    border: 2px black solid;
-    border-radius: 10px;
-}
-
-section.ink {
-    background-color: black;
-    color: #1be5ff;
-}
-
-section.review {
-    width: 50%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    font-family: 'Press Start 2P', cursive;
-    font-weight: 300;
-    font-size: 5rem;
-    text-shadow: 2px 2px white;
-}
-
 h2 {
-    font-family: 'Press Start 2P', cursive;
-    font-weight: 300;
-    font-size: 2rem;
-    display: flex;
-    justify-content: center;
+    font-weight: 400;
+    font-size: 1.2rem;
+}
+
+input {
+    border: 4px #1be5ff solid;
+    border-radius: 3px;
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+    font-size: 1rem;
+    width: 200px;
+
 }
 
 button {

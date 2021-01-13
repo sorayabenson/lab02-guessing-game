@@ -17,33 +17,25 @@ guessButton.addEventListener('click', () => {
     const correctAnswerMessage = `that's the number!`;
     const lostMessage = `sorry the answer was ${randomNumberSelector}, please try again.`;
 
+    --guessesRemain
+    remainingGuessesText.textContent = `Trys left: ${guessesRemain}`;
+
     if (userGuess < randomNumberSelector) {
         resultsMessageText.textContent = tooLowMessage;
     }
     else if (userGuess > randomNumberSelector) {
         resultsMessageText.textContent = tooHighMessage;
     }
-    else if (userGuess == randomNumberSelector) {
+    else {
         resultsMessageText.textContent = correctAnswerMessage;
         remainingGuessesText.hidden = true;
         guessButton.disabled = true;
     };
 
-    remainingGuessesText.textContent = `You have ${guessesRemain--} trys left.`;
-
     if (guessesRemain === 0) {
         guessButton.disabled = true;
         resultsMessageText.textContent = lostMessage;
-
-        console.log(randomNumberSelector);
     };
 
-})
-
-//     - addEventListener to the submit button
-
-        // remaining guesses decrease by 1 (--)
-
-            // if guess is correct party!
-                // disable input
-        // disable input if run out of guesses + loser message.
+    console.log(randomNumberSelector);
+});
