@@ -17,25 +17,27 @@ guessButton.addEventListener('click', () => {
     const correctAnswerMessage = `that's the number!`;
     const lostMessage = `sorry the answer was ${randomNumberSelector}, please try again.`;
 
-    --guessesRemain
-    remainingGuessesText.textContent = `Trys left: ${guessesRemain}`;
-
     if (userGuess < randomNumberSelector) {
         resultsMessageText.textContent = tooLowMessage;
     }
     else if (userGuess > randomNumberSelector) {
         resultsMessageText.textContent = tooHighMessage;
     }
-    else if (userGuess == randomNumberSelector) {
+    else if (userGuess === randomNumberSelector) {
         resultsMessageText.textContent = correctAnswerMessage;
         remainingGuessesText.hidden = true;
         guessButton.disabled = true;
     }
-    else {
-        guessesRemain === 0
-        guessButton.disabled = true;
+
+    --guessesRemain;
+    remainingGuessesText.textContent = `Trys left: ${guessesRemain}`;
+
+    if (guessesRemain === 0) {
         resultsMessageText.textContent = lostMessage;
-    };
+        guessButton.disabled = true;
+    }
+
+
 
     console.log(randomNumberSelector);
 });
